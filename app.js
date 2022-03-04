@@ -44,14 +44,17 @@ function generate_table(anyarray) {
     cell.className = "name";
     var cellText = document.createTextNode(book_name);
     const anybtn = document.createElement("input");
-    anybtn.value = 'delete';
+    anybtn.value = 'Delete';
     anybtn.type = 'button';
     anybtn.id = book_name;
     anybtn.onclick = this.deleteRow;
+    anybtn.className = 'btn btn-danger';
+    anybtn.style.marginLeft = "5em";
     const editbtn = document.createElement("input");
     editbtn.type = 'button';
     editbtn.onclick = this.toggleModal;
-    editbtn.value = 'edit';
+    editbtn.value = 'Edit';
+    editbtn.className = 'btn btn-primary'
     cell2.appendChild(editbtn);
     cell2.appendChild(anybtn);
     cell.appendChild(cellText);
